@@ -7,9 +7,9 @@ build:
 	gcc -DPYTHON=\"$(PYTHON)\" -DPREFIX=\"$(PREFIX)\" -o f5vpn-login-runner f5vpn-login-runner.c
 
 install: build
-	cp f5vpn-login.py $(PREFIX)/sbin/f5vpn-login.py
-	cp f5vpn-login-runner $(PREFIX)/bin/f5vpn-login
-	chmod u+s $(PREFIX)/bin/f5vpn-login
+	cp f5vpn-login.py $(PREFIX)/local/bin/f5vpn-login.py
+	cp f5vpn-login-runner $(PREFIX)/local/bin/f5vpn-login
+	chmod u+s $(PREFIX)/local/bin/f5vpn-login
 
 clean:
 	rm f5vpn-login-runner
